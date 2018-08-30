@@ -61,9 +61,14 @@ ipcMain.on('glitch-images', (event, arg) => {
 	console.log(arg); // prints "ping"
 	if (arg !== '') {
 		console.log('we are looking to glitch this folder:', arg);
-		new Glitch(arg);
-		shell.openItem(arg);
-		event.returnValue = 'done';
+		if (arg[arg.length - 1] === '/') {
+			new Glitch(arg);
+			shell.openItem(arg);
+			event.returnValue = 'done';
+		} else {
+			event.returnValue = 'error';
+			event.sender.send('error', 'Error: You forgot a trailing slash.');
+		}
 	} else {
 		event.returnValue = 'done';
 	}

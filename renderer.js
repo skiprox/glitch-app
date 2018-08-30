@@ -16,6 +16,10 @@ class Renderer {
 	}
 	addListeners() {
 		this.submit.addEventListener('click', this.onSubmit);
+		ipcRenderer.on('error', (event, error) => {
+			console.log(error);
+			alert(error);
+		});
 	}
 	onSubmit(e) {
 		console.log('we fucking submit');
