@@ -9,7 +9,7 @@ class Renderer {
 		this.submit = document.getElementById('submit');
 		this.onSubmit = this.onSubmit.bind(this);
 		this.addListeners();
-		if (window.confirm("This is extremely fucking dangerous.\nThis will permanently change images on your computer.\nAre you sure you want to continue?")) {
+		if (window.confirm("This is potentially dangerous.\n\nThis will permanently change images on your computer.\n\nAre you sure you want to continue?")) {
 		} else {
 			ipcRenderer.sendSync('exit', 'exit');
 		}
