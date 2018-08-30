@@ -1,0 +1,75 @@
+body, html {
+	font-family: helvetica, sans-serif;
+	background-color:#323133;
+	color: white;
+}
+body {
+	&:after {
+		content: '';
+		position: absolute;
+		top:0px;
+		left:0px;
+		right:0px;
+		bottom:0px;
+		z-index:1000;
+		background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 5px);
+		background-size:100% 5px;
+		animation: lines 2s ease-out infinite;
+		opacity:0.3;
+		mix-blend-mode: color-burn;
+		pointer-events: none;
+	}
+}
+.glitch-title {
+	position: absolute;
+	left: 50%;
+	top: 100px;
+	transform: translateX(-50%);
+	font-size: 120px;
+	font-weight: bold;
+	text-transform: lowercase;
+	margin-bottom: 1em;
+	animation: giggle 1s ease infinite;
+	mix-blend-mode: difference;
+	&.title-1 {
+		color: #f00;
+		left: 49.5%;
+	}
+	&.title-2 {
+		color: #0f0;
+		animation-delay:-0.67s;
+	}
+	&.title-3 {
+		color: #00f;
+		animation-delay:-0.33s;
+		left: 50.5%;
+	}
+}
+.glitch-form {
+	position: relative;
+	width: 100%;
+	top: 240px;
+	text-align: center;
+}
+input, label, button {
+	position: relative;
+	z-index: 1001;
+	display: block;
+	padding: 10px;
+	border: none;
+	box-shadow: 0;
+}
+label {
+	font-size: 24px;
+	margin-bottom: 1em;
+}
+input {
+	font-size: 32px;
+	margin: 0 auto 1em auto;
+}
+button {
+	font-size: 32px;
+	background: white;
+	color: #323133;
+	margin: 0 auto;
+}

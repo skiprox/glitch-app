@@ -1,0 +1,20 @@
+{
+  "name": "glitch-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "css": "node-sass public/scss/main.scss public/css/main.css --output-style compressed",
+    "watch:css": "onchange 'public/scss/**/*.scss' -- npm run css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^2.0.8"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.3",
+    "onchange": "^4.1.0"
+  }
+}
