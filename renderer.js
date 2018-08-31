@@ -22,7 +22,6 @@ class Renderer {
 		});
 	}
 	onSubmit(e) {
-		console.log('we fucking submit');
 		e.preventDefault();
 		ipcRenderer.sendSync('glitch-images', this.input.value);
 	}
