@@ -1,6 +1,6 @@
 # Glitch
 
-> Glitch your images in batches
+> Glitch your images in batches (currently only jpgs...)
 
 To run,
 
